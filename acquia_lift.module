@@ -98,6 +98,17 @@ function acquia_lift_form_node_type_form_submit(array $form, FormStateInterface 
 }
 
 /**
+ * Implements hook_theme().
+ */
+function acquia_lift_theme() {
+  return array(
+    'optout_button' => array(
+      'variables' => array('opt_outed' => FALSE),
+    ),
+  );
+}
+
+/**
  * On user login (and user register) event, capture identity.
  *
  * Implements hook_user_login().

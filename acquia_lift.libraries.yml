@@ -6,3 +6,14 @@ acquia_lift:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+
+optopt_button:
+  version: VERSION
+  js:
+    js/plugins/optopt_button.js: {}
+  css:
+    theme:
+      css/plugins/optout_button.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,16 @@
+<p>
+<div class="acquia-lift-optout {% if opt_outed == false %}acquia-lift-optout--enabled{% endif %}">
+    <!-- Toggle Button -->
+    <div class="acquia-lift-optout__button-wrapper">
+        <button class="acquia-lift-optout__button"></button>
+    </div>
+
+    <!-- Text is boxes are swapped with Disable/Enable functionality -->
+    <div class="acquia-lift-optout__text-box {% if opt_outed == false %}hidden{% endif %}">
+        {% trans %}Acquia Lift is Opted-Out{% endtrans %}
+    </div>
+    <div class="acquia-lift-optout__text-box {% if opt_outed %}hidden{% endif %}">
+        {% trans %}Acquia Lift is Opted-In{% endtrans %}
+    </div>
+</div>
+</p>
