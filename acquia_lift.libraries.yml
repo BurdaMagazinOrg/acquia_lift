@@ -7,10 +7,10 @@ acquia_lift:
     - core/drupal
     - core/drupalSettings
 
-optopt_button:
+optout_button:
   version: VERSION
   js:
-    js/plugins/optopt_button.js: {}
+    js/plugins/optout_button.js: {}
   css:
     theme:
       css/plugins/optout_button.css: {}

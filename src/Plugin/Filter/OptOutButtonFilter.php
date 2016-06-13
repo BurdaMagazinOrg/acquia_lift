@@ -51,7 +51,7 @@ class OptOutButtonFilter extends FilterBase {
       $filteredResult->setProcessedText($newText);
 
       $filteredResult->addAttachments([
-        'library' => array('acquia_lift/optopt_button'),
+        'library' => array('acquia_lift/optout_button'),
       ]);
     }
 
