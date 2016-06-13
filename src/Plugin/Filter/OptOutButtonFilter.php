@@ -17,7 +17,7 @@ class OptOutButtonFilter extends FilterBase {
 
   /**
    * generates rendering array for placeholder defined in process method
-   * 
+   *
    * @return array
    */
   public static function renderOptOutButton() {
@@ -35,7 +35,7 @@ class OptOutButtonFilter extends FilterBase {
 
   /**
    * prepare placeholder for rendering of optout button content
-   * 
+   *
    * @param string $text
    * @param string $langcode
    *
@@ -44,13 +44,16 @@ class OptOutButtonFilter extends FilterBase {
   public function process($text, $langcode) {
     $filteredResult = new FilterProcessResult($text);
 
-    $placeholder = $filteredResult->createPlaceholder(get_class() . '::renderOptOutButton', array());
-    $newText = str_replace('[acquia_lift:optout_button]', $placeholder, $text);
-    $filteredResult->setProcessedText($newText);
+    if (strpos($text, '[acquia_lift:optout_button]') !== FALSE) {
+      $placeholder = $filteredResult->createPlaceholder(get_class() . '::renderOptOutButton', array());
 
-    $filteredResult->addAttachments([
-      'library' => array('acquia_lift/optopt_button'),
-    ]);
+      $newText = str_replace('[acquia_lift:optout_button]', $placeholder, $text);
+      $filteredResult->setProcessedText($newText);
+
+      $filteredResult->addAttachments([
+        'library' => array('acquia_lift/optopt_button'),
+      ]);
+    }
 
     return $filteredResult;
   }
