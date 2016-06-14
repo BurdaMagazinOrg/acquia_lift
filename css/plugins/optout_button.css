@@ -1,0 +1,53 @@
+/* styles for Acquia Lift Opt-Out Toggle Button */
+.acquia-lift-optout__button-wrapper {
+    float: left;
+    background-color: white;
+    margin: 2px 5px 2px 5px;
+    border-radius: 20px;
+    border: 2px solid #D0D0D0;
+    height: 24px;
+    cursor: pointer;
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+.acquia-lift-optout__button {
+    cursor: pointer;
+    outline: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    float: left;
+    margin: -3px 0 0 -3px;
+    border: 2px solid #D0D0D0;
+    transition: left 0.3s;
+}
+
+/* styles for Enabled state of toggle button */
+.acquia-lift-optout--enabled .acquia-lift-optout__button-wrapper {
+    background-color: #83B152;
+    border: 2px solid #7DA652;
+}
+
+.acquia-lift-optout--enabled .acquia-lift-optout__button {
+    left: 26px;
+    top: 0;
+    margin: 0;
+    border: none;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
